@@ -1,0 +1,8 @@
+obj
+bin
+appsettings.json
+*.db
+storage.ide
+storage.ide-shm
+storage.ide-wal
+db.lock
