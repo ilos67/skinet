@@ -8,7 +8,7 @@ const routes: Routes = [
   // {path: 'shop', component: ShopComponent},
   // {path: 'shop/:id', component: ProductDetailsComponent},
   {path: '', component: ShopComponent},
-  {path: ':id', component: ProductDetailsComponent},
+  {path: ':id', component: ProductDetailsComponent, data: {breadcrumb: {alias: 'productDetails'}}},
 ];
 
 @NgModule({
