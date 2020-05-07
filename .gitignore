@@ -7,3 +7,6 @@ storage.ide-shm
 storage.ide-wal
 db.lock
 *rdb
+publish
+wwwroot
+

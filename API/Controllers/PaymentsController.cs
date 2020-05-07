@@ -18,7 +18,6 @@ namespace API.Controllers
         private readonly IPaymentService _paymentService;
         private readonly ILogger<IPaymentService> _logger;
         private readonly string _whSecret;
-        private readonly IConfiguration _config;
         public PaymentsController(IPaymentService paymentService, ILogger<IPaymentService> logger, IConfiguration config)
         {
             // _config = config;
@@ -27,7 +26,7 @@ namespace API.Controllers
              _whSecret = config.GetSection("StripeSettings:WhSecret").Value;
         }
 
-        [Authorize]
+       [Authorize]
         [HttpPost("{basketId}")]
         public async Task<ActionResult<CustomerBasket>> CreateOrUpdatePaymentIntent(string basketId)
         {
